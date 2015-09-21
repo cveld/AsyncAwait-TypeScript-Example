@@ -1,0 +1,21 @@
+{
+  "name": "ASP.NET",
+  "version": "0.0.0",
+  "Dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-concat": "2.5.2",
+    "gulp-cssmin": "0.1.7",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.9.0",
+    "gulp-uglify": "1.2.0",
+    "merge-stream": "^1.0.0",
+    "merge2": "^0.3.6",
+    "ng-annotate": "^1.0.2",
+    "reporters": "0.0.4",
+    "rimraf": "2.2.8"
+  },
+  "scripts": {},
+  "dependencies": {}
+}

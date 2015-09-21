@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@section scripts{
+    <script src="~/lib/babel/browser-polyfill.js"></script>
+    <script src="~/js/app.js"></script>
+<script>
+    jQuery(document).ready(function () {
+
+        test();
+    });
+</script>
+}
+
