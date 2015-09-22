@@ -87,16 +87,18 @@ gulp.task("compile:typescript", function () {
 	    	.pipe(sourcemaps.write("."))
 	.pipe(gulp.dest("./wwwroot/js"));
 	return;
-    // the following does not work as it produces a sourcemap-line into the output js:
 
-    mergeStream(
+    // the following merges the babel browser polyfill with the typescript output into one javascript file:
+
+    merge2(
         gulp.src(polyfill),
         gulp.src(["./**/**.ts", "!node_modules/**/**.ts"])
 		.pipe(sourcemaps.init())
 		.pipe(tsc(tsProject, {}, reporters("gulp-typescript"))).js
 		    .pipe(babel())            
     	    .pipe(ngAnnotate())
-	    	.pipe(sourcemaps.write(".")))
+	    	)
+    .pipe(sourcemaps.write("."))
     .pipe(concat("app.js"))
 	.pipe(gulp.dest("./wwwroot/js"));
 

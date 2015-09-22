@@ -1,12 +1,12 @@
 ﻿function test() {
-    console.log("async func2");
+    console.log("awaiter to be called...");
     awaiter();    
 }
 
 
 async function awaiter() {
-    var q = await asyncfunc();
-    console.log(q);
+    var result = await asyncfunc();
+    console.log(result);
 }
 
 function asyncfunc() {

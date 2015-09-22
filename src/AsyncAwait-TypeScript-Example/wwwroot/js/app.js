@@ -30,12 +30,12 @@ var __awaiter = undefined && undefined.__awaiter || function (thisArg, _argument
     });
 };
 function test() {
-    console.log("async func2");
+    console.log("awaiter to be called...");
     awaiter();
 }
 function awaiter() {
     return __awaiter(this, void 0, Promise, regeneratorRuntime.mark(function callee$1$0() {
-        var q;
+        var result;
         return regeneratorRuntime.wrap(function callee$1$0$(context$2$0) {
             while (1) switch (context$2$0.prev = context$2$0.next) {
                 case 0:
@@ -43,9 +43,9 @@ function awaiter() {
                     return asyncfunc();
 
                 case 2:
-                    q = context$2$0.sent;
+                    result = context$2$0.sent;
 
-                    console.log(q);
+                    console.log(result);
 
                 case 4:
                 case "end":
