@@ -10,7 +10,7 @@ The following components have been used:
 * Babel Browser Polyfill; included in Babel; a JavaScript file that polyfills the Promise and regenerator objects (and more). 
 
 The TypeScript example:
-```
+```typescript
 function test() {
     console.log("awaiter to be called...");
     awaiter();    
@@ -35,7 +35,7 @@ function asyncfunc() {
 ```
 
 The Gulp task that is responsible for processing the .ts-file towards an ES5-compabile .js-file:
-```
+```javascript
 gulp.task("compile:typescript", function () {
   var tsResult =
     gulp.src(["./**/**.ts", "!node_modules/**/**.ts"])
