@@ -4,27 +4,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Metadata;
-using Microsoft.Data.Entity.Migrations.Infrastructure;
 using WebApplication1.Models;
+using Microsoft.Data.Entity.Infrastructure;
 
 namespace WebApplication1.Migrations
 {
-    [ContextType(typeof(ApplicationDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class CreateIdentitySchema
     {
         public override string Id
         {
             get { return "00000000000000_CreateIdentitySchema"; }
         }
-
-        public override string ProductVersion
-        {
-            get { return "7.0.0-beta5"; }
-        }
-
-        public override void BuildTargetModel(ModelBuilder builder)
+    
+        protected override void BuildTargetModel(ModelBuilder builder)
         {
             builder
+                .Annotation("ProductVersion", "7.0.0-beta7")
                 .Annotation("SqlServer:ValueGeneration", "Identity");
 
             builder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRole", b =>
